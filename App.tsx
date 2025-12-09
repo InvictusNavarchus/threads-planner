@@ -439,7 +439,7 @@ export default function App() {
                     <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Daily Theme</label>
                     <input 
                         type="text"
-                        className="w-full text-base border-b-2 border-gray-200 focus:border-black py-2 outline-none transition-colors bg-transparent"
+                        className="w-full text-base border-b-2 border-gray-200 focus:border-black py-2 outline-none transition-colors bg-transparent text-gray-900 placeholder-gray-400"
                         placeholder="e.g. Educational Thread about React"
                         value={getDayPlan(selectedDate).dailyTheme}
                         onChange={(e) => updateDailyTheme(selectedDate, e.target.value)}
@@ -462,7 +462,7 @@ export default function App() {
                         <div className="animate-in fade-in zoom-in-95">
                             <div className="flex gap-2 mb-3">
                                 <input 
-                                    className="flex-1 text-sm rounded-md border border-purple-200 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none"
+                                    className="flex-1 text-sm rounded-md border border-purple-200 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none text-gray-900 placeholder-gray-500"
                                     placeholder="Topic (e.g. Remote Work)"
                                     value={ideaTopic}
                                     onChange={(e) => setIdeaTopic(e.target.value)}

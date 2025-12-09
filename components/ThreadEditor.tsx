@@ -112,7 +112,7 @@ export const ThreadEditor: React.FC<ThreadEditorProps> = ({ post, onSave, onCanc
               <Wand2 size={16} /> Paste long text to create a chain
             </h4>
             <textarea
-              className="w-full p-3 rounded-lg border-purple-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent text-sm mb-3 min-h-[120px]"
+              className="w-full p-3 rounded-lg border-purple-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent text-sm mb-3 min-h-[120px] text-gray-900 placeholder-gray-500"
               placeholder="Paste your article or long thought here..."
               value={splitInput}
               onChange={(e) => setSplitInput(e.target.value)}
@@ -142,7 +142,7 @@ export const ThreadEditor: React.FC<ThreadEditorProps> = ({ post, onSave, onCanc
               type="text" 
               value={internalPost.title}
               onChange={(e) => setInternalPost(prev => ({...prev, title: e.target.value}))}
-              className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-black focus:border-transparent outline-none"
+              className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-black focus:border-transparent outline-none text-gray-900 placeholder-gray-400"
               placeholder="e.g. Launch Announcement"
             />
           </div>
@@ -153,7 +153,7 @@ export const ThreadEditor: React.FC<ThreadEditorProps> = ({ post, onSave, onCanc
                 type="time" 
                 value={internalPost.time}
                 onChange={(e) => setInternalPost(prev => ({...prev, time: e.target.value}))}
-                className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-black outline-none"
+                className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-black outline-none text-gray-900"
               />
             </div>
             <div>
@@ -161,7 +161,7 @@ export const ThreadEditor: React.FC<ThreadEditorProps> = ({ post, onSave, onCanc
               <select 
                 value={internalPost.status}
                 onChange={(e) => setInternalPost(prev => ({...prev, status: e.target.value as any}))}
-                className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-black outline-none bg-white"
+                className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-black outline-none bg-white text-gray-900"
               >
                 <option value="draft">Draft</option>
                 <option value="scheduled">Scheduled</option>
@@ -219,7 +219,7 @@ export const ThreadEditor: React.FC<ThreadEditorProps> = ({ post, onSave, onCanc
                       value={segment.content}
                       onChange={(e) => updateSegment(segment.id, e.target.value)}
                       placeholder={index === 0 ? "What's new?" : "Say more..."}
-                      className="w-full p-3 bg-transparent border-b border-gray-200 focus:border-black outline-none resize-none text-sm min-h-[100px]"
+                      className="w-full p-3 bg-transparent border-b border-gray-200 focus:border-black outline-none resize-none text-sm min-h-[100px] text-gray-900 placeholder-gray-400"
                     />
                     
                     <div className="flex justify-between items-center mt-1 px-1">
